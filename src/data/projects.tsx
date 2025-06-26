@@ -8,6 +8,7 @@ export interface Project {
   images: {
     src: string
     alt: string
+    link?: string
   }[]
   tools: string[]
 }
@@ -28,20 +29,19 @@ export const projectsData: Project[] = [
     ],
     images: [
       {
-        src: "/placeholder.svg?height=200&width=200",
+        src: "/images/projects/meari.png",
         alt: "Brownies bite product",
+        link: "https://www.instagram.com/p/DAaQjuITYFM/",
       },
       {
-        src: "/placeholder.svg?height=200&width=200",
+        src: "/images/projects/meari2.png",
         alt: "Burnt cheesecake story",
+        link: "https://drive.google.com/drive/folders/15bBnrPUBO31tMTOjL7y4eOJ6kPxOBY4j?usp=share_link",
       },
       {
-        src: "/placeholder.svg?height=200&width=200",
-        alt: "Meari Bakery branding 2021",
-      },
-      {
-        src: "/placeholder.svg?height=200&width=200",
+        src: "/images/projects/meari3.png",
         alt: "Preorder weekend cheesecake",
+        link: "https://www.instagram.com/p/DAaSMFlT0M5/",
       },
     ],
     tools: ["Adobe Photoshop", "Adobe Illustrator", "CapCut"],
@@ -61,22 +61,52 @@ export const projectsData: Project[] = [
     ],
     images: [
       {
-        src: "/placeholder.svg?height=200&width=200",
-        alt: "Campaign poster design",
+        src: "/images/projects/sulam.png",
+        alt: "sulam memori",
+        link: "https://www.instagram.com/reel/C_xmyr0h189/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
       },
       {
-        src: "/placeholder.svg?height=200&width=200",
-        alt: "Instagram story templates",
+        src: "/images/projects/sulam2.png",
+        alt: "OST film favorit lu",
+        link: "https://www.instagram.com/reel/DBD_z5xyiBx/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
       },
       {
-        src: "/placeholder.svg?height=200&width=200",
-        alt: "Social media analytics",
-      },
-      {
-        src: "/placeholder.svg?height=200&width=200",
-        alt: "Brand guidelines",
+        src: "/images/projects/sulam3.png",
+        alt: "Kesan pesan",
+        link: "https://www.instagram.com/reel/DBV-k52yv9N/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
       },
     ],
-    tools: ["Figma", "Canva", "Google Analytics"],
+    tools: ["Capcut", "Canva"],
+  },
+  {
+    id: "comday-61",
+    title: "Comday\n61",
+    subtitle: "Content Production",
+    timeline: "Content Production | Mei - Sept 2024",
+    description:
+      "As part of the PR team for Comday 61, I was involved in content production to help promote and document the event.",
+    tasks: [
+      "Producing short-form video content",
+      "Editing footage for event teasers and documentation",
+      "Supporting the event’s digital presence through social media storytelling",
+    ],
+    images: [
+      {
+        src: "/images/projects/comday.png",
+        alt: "Alur masuk content",
+        link: "https://www.tiktok.com/@comday2024/video/7414293729336446213?is_from_webapp=1&sender_device=pc&web_id=7507489208412882450",
+      },
+      {
+        src: "/images/projects/comday2.png",
+        alt: "Make Trending Content",
+        link: "https://www.instagram.com/reel/C-O_3Qqog6s/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      },
+      {
+        src: "/images/projects/comday3.png",
+        alt: "Rate seminggu jadi Maba KMN",
+        link: "https://www.instagram.com/reel/C-0NzlfI1v3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+      },
+    ],
+    tools: ["Capcut"],
   },
 ]

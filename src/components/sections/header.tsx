@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image";
 
 export default function Header() {
   return (
@@ -6,7 +7,13 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold text-gray-900">
-            Ayu
+            <Image
+                            src="/ayu-navbar.png" // <- ganti sesuai path
+                            alt="ayu"
+                            width={50}
+                            height={50}
+                            priority
+                          />
           </Link>
           <div className="flex items-center space-x-8">
             <Link href="#about" className="text-gray-700 hover:text-gray-900 transition-colors">

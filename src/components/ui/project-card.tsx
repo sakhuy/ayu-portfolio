@@ -12,6 +12,7 @@ interface Project {
   images: {
     src: string
     alt: string
+    link?: string
   }[]
   tools: string[]
 }
@@ -54,17 +55,22 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-6">
           {project.images.map((image, imageIndex) => (
             // 3. STYLING ITEM GAMBAR: Disesuaikan dengan referensi
-            <div key={imageIndex} className="bg-[#E9EAC3] rounded-2xl p-2.5">
-              {/* Parent div untuk menjaga aspek rasio potret seperti HP */}
-              <div className="relative w-full aspect-[9/16] rounded-lg overflow-hidden">
-                <Image
-                  src={image.src || "/placeholder.svg"}
-                  alt={image.alt}
-                  fill // 4. GUNAKAN 'fill' untuk mengisi container
-                  className="object-cover" // object-cover agar gambar tidak gepeng
-                />
-              </div>
-            </div>
+            <div key={imageIndex} className="bg-[#E9EAC3] rounded-2xl p-2.5 group overflow-hidden">
+  <a
+    href={image.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block relative w-full aspect-[9/16] rounded-lg overflow-hidden"
+  >
+    <Image
+      src={image.src || "/placeholder.svg"}
+      alt={image.alt}
+      fill
+      className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+    />
+  </a>
+</div>
+
           ))}
         </div>
 
