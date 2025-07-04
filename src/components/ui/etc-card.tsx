@@ -26,12 +26,12 @@ export default function ETCCard({ project }: ETCCardProps) {
       <div className="grid lg:grid-cols-6 gap-12 items-start max-w-7xl mx-auto">
         {/* Deskripsi Kiri */}
         <div className="lg:col-span-2 bg-white rounded-2xl shadow-md p-6 space-y-6">
-          <h3 className="text-5xl font-stix text-gray-900 italic font-serif leading-none">
+          <h3 className="text-5xl font-stix text-black italic font-serif leading-none">
             {project.title}
           </h3>
           <div className="space-y-4">
             {project.description.map((paragraph, i) => (
-              <p key={i} className="text-gray-700 leading-relaxed text-lg">
+              <p key={i} className="text-black leading-relaxed text-lg text-justify">
                 {paragraph}
               </p>
             ))}
@@ -46,7 +46,7 @@ export default function ETCCard({ project }: ETCCardProps) {
               {showcase.type === "grid" && (
                 <div className="grid grid-cols-3 gap-4">
                   {showcase.images.map((image, imgIdx) => (
-                    <div key={imgIdx} className="bg-[#C7D438] rounded-2xl p-2.5 overflow-hidden aspect-[9/16]">
+                    <div key={imgIdx} className="bg-[#F05692] rounded-2xl p-2.5 overflow-hidden aspect-[9/16]">
                       <Image
                         src={image.src}
                         alt={image.alt}
@@ -60,7 +60,7 @@ export default function ETCCard({ project }: ETCCardProps) {
               )}
 
               {showcase.type === "wide" && (
-                <div className="bg-[#C7D438] rounded-2xl p-4">
+                <div className="bg-[#F05692] rounded-2xl">
                   {showcase.images.map((image, imgIdx) => (
                     <Image
                       key={imgIdx}
@@ -75,7 +75,7 @@ export default function ETCCard({ project }: ETCCardProps) {
               )}
 
               {showcase.type === "single" && (
-                <div className="bg-[#C7D438] rounded-2xl p-4">
+                <div className="bg-[#F05692] rounded-2xl">
                   {showcase.images.map((image, imgIdx) => (
                     <Image
                       key={imgIdx}
@@ -95,7 +95,7 @@ export default function ETCCard({ project }: ETCCardProps) {
                   <Button
                     key={toolIdx}
                     variant="outline"
-                    className="bg-white border-2 border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white rounded-full px-6 py-2"
+                    className="bg-white border-2 border-gray-800 text-black hover:bg-black hover:text-white rounded-full px-6 py-2"
                   >
                     {tool}
                   </Button>
